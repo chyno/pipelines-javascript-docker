@@ -25,7 +25,8 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
-        tags: pipeline-$(Build.BuildId)
+        tags: 
+          pipeline-$(Build.BuildId)
     - script: docker run pipeline-$(Build.BuildId)
       displayName: run docker build
            
