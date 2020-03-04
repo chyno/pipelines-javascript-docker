@@ -33,7 +33,7 @@ stages:
     - job: build
       displayName: Build
       steps:
-    - script: docker run $(tag)
-    displayName: run docker build
+        - script: docker run $(tag)
+          displayName: run docker build
            
           
