@@ -27,7 +27,7 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         arguments : 
           -t foobar
-    - script: docker run -t pipeline-$(Build.BuildId)
+    - script: docker run -t foobar
       displayName: run tests
            
           
