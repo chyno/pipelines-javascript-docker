@@ -28,6 +28,6 @@ stages:
         tags: 
           pipeline-$(Build.BuildId)
     - script: docker run pipeline-$(Build.BuildId)
-      displayName: run docker build
+      displayName: run docker -t build
            
           
