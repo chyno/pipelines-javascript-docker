@@ -27,13 +27,14 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         tags: |
           $(tag)
+          foo
 - stage: Tests
   displayName: Run Tests
   jobs:
     - job: build
       displayName: Build
       steps:
-        - script: docker run $(tag)
+        - script: docker run foo
           displayName: run docker build
            
           
