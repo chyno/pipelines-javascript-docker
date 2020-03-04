@@ -28,12 +28,12 @@ stages:
         tags: |
           $(tag)
 - stage: Tests
-	displayName: Run Tests
-	jobs:
-		- job: build
-			displayName: Build
-			steps:
-				- script: docker run $(tag)
-					displayName: run docker build
+  displayName: Run Tests
+  jobs:
+    - job: build
+      displayName: Build
+      steps:
+    - script: docker run $(tag)
+    displayName: run docker build
            
           
