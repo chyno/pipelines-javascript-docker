@@ -26,13 +26,7 @@ stages:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         tags: pipeline-$(Build.BuildId)
-- stage: Tests
-  displayName: Run Tests
-  jobs:
-    - job: build
-      displayName: Build
-      steps:
-        - script: docker run pipeline-$(Build.BuildId)
-          displayName: run docker build
+    - script: docker run pipeline-$(Build.BuildId)
+      displayName: run docker build
            
           
